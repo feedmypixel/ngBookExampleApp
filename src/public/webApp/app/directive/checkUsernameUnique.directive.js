@@ -11,19 +11,19 @@
 
             require: 'ngModel',
 
-            link: function( scope, element, attributes, ngModelCtl ){
+            link: function( scope, element, attributes, ngModelController ){
 
                 scope.$watch( attributes.ngModel, function( newVal, oldVal ){
 
-                    if( newVal !== oldVal ){
+                    if( newVal && newVal !== oldVal ){
 
                         IsUniqueService.userName( { userName: newVal } ).$promise.then( function( data ){
 
-                            ngModelCtl.$setValidity( 'unique', data.isUnique );
+                            ngModelController.$setValidity( 'unique', data.isUnique );
 
-                        }, function( data ){
+                        }, function(){
 
-                            ngModelCtl.$setValidity( 'unique', false );
+                            ngModelController.$setValidity( 'unique', false );
                         } );
                     }
                 } );
@@ -31,4 +31,5 @@
         };
 
     } ] );
+
 }( angular ));

@@ -16,9 +16,10 @@ app.use( methodOverride() );
 
 app.route( '/api/is_unique/username').post( function( req, res, next ){
 
-    console.log( req.body );
+    //TODO username functionality
+    var isUnique = 'ben' === req.body.userName && true;
 
-    res.json( 200, { isUnique: true } );
+    res.json( 200, { isUnique: isUnique } );
 });
 
 app.route( '*' ).get( function( req, res, next ){
