@@ -1,0 +1,10 @@
+{
+  "name": "ngBook",
+  "version": "0.0.0",
+  "dependencies": {
+    "morgan": "^1.0.1",
+    "method-override": "^1.0.0",
+    "body-parser": "^1.0.2",
+    "express": "^4.1.1"
+  }
+}

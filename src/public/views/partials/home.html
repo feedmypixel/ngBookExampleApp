@@ -1,0 +1,83 @@
+<div ng-controller="IndexController">
+
+    <!-- $apply -->
+    <div>
+        <h2>$apply example</h2>
+        <p>{{clock.now}}</p>
+    </div>
+
+    <!-- $parse -->
+    <div>
+        <h2>$parse example</h2>
+        <input ng-model="expr"
+               type="text"
+               placeholder="Enter an expression" />
+
+        <h2>{{ parsedValue }}</h2>
+    </div>
+
+    <!-- $interpolate -->
+    <div>
+        <h2>$interpolate example</h2>
+        <input ng-model="to"
+               type="email"
+               placeholder="Recipient" />
+
+        <textarea ng-model="emailBody"
+                  rows="10"
+                  cols="40"></textarea>
+
+        <pre>{{ previewText }}</pre>
+    </div>
+
+    <!-- $filter-->
+    <div>
+        <h2>$filter lowercase example</h2>
+        <p>lowercase from JS: <strong>{{ ben }}</strong></p>
+        <p>lowercase from HTML filter: <strong>{{ capitalBen | lowercase }}</strong></p>
+
+        <h2>$filter number example</h2>
+        <p>number from JS: {{ twoDigitNumber }}</p>
+        <p>number from HTML: {{ largeDigitNumber | number:3 }}</p>
+
+        <h2>$filter is capitalized function (show according to function)</h2>
+        <p>{{ [ 'Ben', 'danny', 'naomi', 'Sarah' ] | filter:isCapitalized }}</p>
+
+        <h2>$filter on object property</h2>
+        <p>{{ [
+            { 'name': 'ben' },
+            { 'name': 'danny' },
+            { 'name': 'sarah' },
+            { 'name': 'milly' },
+            { 'name': 'naomi' }
+            ] | filter:{ 'name': 'ben' } }}</p>
+
+        <h2>$filter limitTo</h2>
+        <p>{{ 'Hi it is not Sunny today' | limitTo:3 }}</p>
+
+        <h2>$filter limitTo reversed</h2>
+        <p>{{ 'Hi it is not Sunny today' | limitTo:-5 }}</p>
+
+        <h2>$filter orderBy</h2>
+        <p>{{ [
+            { 'name': 'ben' },
+            { 'name': 'danny' },
+            { 'name': 'sarah' },
+            { 'name': 'milly' },
+            { 'name': 'naomi' }
+            ] | orderBy: 'name' }}</p>
+
+        <h2>$filter orderBy reverse</h2>
+        <p>{{ [
+            { 'name': 'ben' },
+            { 'name': 'danny' },
+            { 'name': 'sarah' },
+            { 'name': 'milly' },
+            { 'name': 'naomi' }
+            ] | orderBy: 'name': true }}</p>
+    </div>
+
+    <h2>$filter custom</h2>
+    <p>{{ 'ginger dogs love ginger biscuits' | lowercase | capitalizeFirstCharacter }}</p>
+
+</div>

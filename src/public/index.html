@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="ngBookApp">
+<head>
+    <link rel="stylesheet" href="lib/bower-components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/list.css"/>
+    <link rel="stylesheet" href="assets/css/link.css"/>
+    <title>ngBook</title>
+</head>
+<body>
+
+    <div class="page-content">
+
+        <nav>
+            <ul>
+                <li class="horizontal-list"><h2><a href="/">Home</a></h2></li>
+                <li class="horizontal-list"><h2><a href="/form">Form</a></h2></li>
+            </ul>
+        </nav>
+
+        <div ng-view></div>
+
+    </div>
+
+    <script type="text/javascript" src="lib/bower-components/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/bower-components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="lib/bower-components/angular-route/angular-route.js"></script>
+
+    <script type="text/javascript" src="webApp/app.js"></script>
+
+    <script type="text/javascript" src="webApp/index/index.module.js"></script>
+    <script type="text/javascript" src="webApp/index/Index.controller.js"></script>
+
+    <script type="text/javascript" src="webApp/form/form.module.js"></script>
+    <script type="text/javascript" src="webApp/form/Form.controller.js"></script>
+
+    <script type="text/javascript" src="webApp/app/ngBookApp.module.js"></script>
+    <script type="text/javascript" src="webApp/app/filter/capitalizeFirstCharacter.filter.js"></script>
+    <script type="text/javascript" src="webApp/app/service/isUnique.service.js"></script>
+    <script type="text/javascript" src="webApp/app/directive/checkUsernameUnique.directive.js"></script>
+
+</body>
+</html>
