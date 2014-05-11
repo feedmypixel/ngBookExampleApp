@@ -1,0 +1,16 @@
+<h1>Scope hierarchy</h1>
+
+<p>We can access: {{ rootProperty }}</p>
+
+<div ng-controller="ScopeParentController">
+
+    <p>We can access: {{ rootProperty }} and {{ parentProperty }}</p>
+
+    <div ng-controller="ScopeChildController">
+        <p>
+            We can access: {{ rootProperty }} and {{ parentProperty }} and {{ childProperty }}
+        </p>
+        <p>{{ fullSentenceFromChild }}</p>
+    </div>
+
+</div>

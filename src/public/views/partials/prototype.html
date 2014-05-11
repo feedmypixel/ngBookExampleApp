@@ -1,0 +1,11 @@
+<div ng-controller="PrototypeParentController">
+    <p>{{ someBareValue }}</p>
+    <p>{{ model.someValue }}</p>
+    <button ng-click="someAction()">Communicate to child</button>
+    <div ng-controller="PrototypeChildController">
+        <p>{{ someBareValue }}</p>
+        <p>{{ model.someValue }}</p>
+        <button ng-click="childAction()">Communicate to parent</button>
+    </div>
+</div>
+

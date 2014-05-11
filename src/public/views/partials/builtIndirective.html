@@ -1,0 +1,48 @@
+<input type="text" ng-model="buttonEnabled"/>
+<button ng-disabled="!buttonEnabled">Press Me</button>
+
+<textarea ng-disabled="textAreaIsDisabled">Waiting 5 seconds to enable!</textarea>
+
+<input type="text" ng-model="someProperty"><br/>
+<input type="text"
+       ng-readonly="someProperty"
+       value="Some text here"/>
+
+<div>
+    <label>someProperty = {{someOtherProperty}}</label>
+    <input type="checkbox"
+           ng-checked="someOtherProperty"
+           ng-init="someOtherProperty = true"
+           ng-model="someOtherProperty">
+</div>
+
+<div>
+    <label>anotherProperty = {{anotherProperty}}</label>
+    <input type="checkbox"
+           ng-checked="anotherProperty"
+           ng-init="anotherProperty = false"
+           ng-model="anotherProperty">
+</div>
+
+
+<div>
+    <label>Select Two Fish:</label>
+    <input type="checkbox"
+           ng-model="isTwoFish"><br/>
+    <select>
+        <option>One Fish</option>
+        <option ng-selected="isTwoFish">Two Fish</option>
+    </select>
+</div>
+
+<div>
+    <a ng-href="{{builtInDirectiveModel.googleUrl}}">{{builtInDirectiveModel.googleText}}</a>
+</div>
+
+<div>
+    <img ng-src="{{builtInDirectiveModel.googleImg}}"/>
+</div>
+
+<div>
+    {{someProperty}}
+</div>
